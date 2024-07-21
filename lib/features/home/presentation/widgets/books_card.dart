@@ -79,6 +79,7 @@
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
+  
   const BookCard({super.key, required this.imagePath});
   final String imagePath;
   @override
@@ -95,7 +96,7 @@ class BookCard extends StatelessWidget {
             width: 1.3,
           ),
           image: DecorationImage(
-              image: AssetImage("$imagePath"),  fit: BoxFit.fill),
+              image:AssetImage("$imagePath"),  fit: BoxFit.fill),
           )
           
     );

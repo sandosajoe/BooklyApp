@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "F:/flutter/my_projects/bookApp/book_app/linux"
+    "cmake.sourceDirectory": "F:/flutter/my_projects/bookApp/book_app/linux",
+    "java.dependency.syncWithFolderExplorer": false
 }

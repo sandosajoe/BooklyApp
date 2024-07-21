@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 class SellerBookTile extends StatelessWidget {
   const SellerBookTile({super.key, required this.image, required this.name, required this.author, required this.rate, required this.selNum});

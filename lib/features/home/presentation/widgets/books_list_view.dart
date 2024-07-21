@@ -90,28 +90,46 @@
 //   }
 // }
 
+import 'package:book_app/core/utils/api_service.dart';
+import 'package:book_app/features/home/data/models/books/books.dart';
+import 'package:book_app/features/home/data/repo/home_repo_implement.dart';
 import 'package:book_app/features/home/presentation/widgets/books_card.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class BookListView extends StatelessWidget {
   BookListView({super.key});
-  final List<String> paths = [
- "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
- "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
- "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
- "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
- "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
 
+//final List books=Books().volumeInfo.imageLinks.thumbnail
+  //HomeRepoImplement(ApiServices(Dio())).featchAllBooks();
+  //  final List books=[
+  //   HomeRepoImplement(ApiServices(Dio())).featchAllBooks()
+  //  ];
+
+  // final HomeRepoImplement homeRepoImplement = HomeRepoImplement(ApiServices(Dio())).
+  //List<String?> books = Books().volumeInfo?.imageLinks?.thumbnail?.toList();
+  //List<String?> books = Books().volumeInfo?.imageLinks?.thumbnail?.toList();
+  //List<String> books = (Books().volumeInfo?.imageLinks?.thumbnail)?.toList() ?? [];
+  //List<String> books = (Books().volumeInfo?.imageLinks?.thumbnail ?? []).cast<String>().toList();
+
+  //List books = [];
+
+  final List<String> books = [
+    "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
+    "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
+    "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
+    "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
+    "lib/core/assets/images/photo_2024-07-17_04-27-10.jpg",
   ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height:224 ,
+      height: 224,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: paths.length,
+        itemCount: books.length,
         itemBuilder: (context, index) {
-          return BookCard(imagePath: paths[index]);
+          return BookCard(imagePath: books[index]);
         },
       ),
     );
